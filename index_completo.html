@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - Luis Fernando da Silva</title>
+  <meta name="description" content="Analista de Infraestrutura (NOC/Redes & Segurança) — VMware, Veeam, Fortinet NSE2, LGPD. Clientes: Banco Caixa Geral (BCG), Ecom Energia, Banco Mercedes‑Benz."/>
+  <style>
+    :root{
+      --bg:#0f1115;
+      --panel:#151922;
+      --muted:#aeb6c2;
+      --text:#e9eef4;
+      --brand:#00aaff;
+      --line:rgba(255,255,255,.08);
+      --chip:#0d141d;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px;margin:0 auto;padding:0 20px}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:20;background:rgba(15,17,21,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
+    .brand{font-weight:700;color:var(--brand)}
+    .menu{display:flex;gap:18px}
+    .menu a{color:var(--muted)}
+    .menu a:hover{color:var(--text)}
+    .burger{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:6px 10px;border-radius:8px}
+    /* mobile menu */
+    @media (max-width:760px){
+      .menu{display:none;flex-direction:column;gap:0}
+      .menu.open{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:8px}
+      .burger{display:inline-flex}
+    }
+    /* HEADER */
+    header{padding:28px 0;border-bottom:1px solid var(--line)}
+    .hero{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:center}
+    .avatar{width:140px;height:140px;border-radius:999px;overflow:hidden;border:2px solid var(--line);box-shadow:0 6px 30px rgba(0,0,0,.35)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1{margin:0;font-size:2rem;line-height:1.2}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .btn{display:inline-block;background:var(--brand);color:#02131b;padding:10px 14px;border-radius:10px;font-weight:700;border:0}
+    .btn.secondary{background:var(--chip);color:var(--text);border:1px solid var(--line)}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    /* SECTIONS */
+    section{padding:28px 0}
+    h2{margin:0 0 14px 0;color:var(--brand);font-size:1.4rem}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+    .chip{background:var(--chip);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+    ul{margin:8px 0 0 20px}
+    footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0;margin-top:18px}
+    /* Projects */
+    .cards{display:grid;gap:16px}
+    @media(min-width:820px){.cards{grid-template-columns:1fr 1fr 1fr}}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+    .card h3{margin:0 0 8px 0;font-size:1.05rem}
+    .small{color:var(--muted);font-size:.95rem}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Luis Fernando</div>
+      <button class="burger" aria-label="Abrir menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰ Menu</button>
+      <div class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#certificacoes">Certificações</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- HEADER -->
+    <header>
+      <div class="hero">
+        <div class="avatar"><img src="foto.jpg" alt="Foto de Luis Fernando da Silva"></div>
+        <div>
+          <h1>Luis Fernando da Silva</h1>
+          <div class="subtitle">Analista de Infraestrutura | NOC | Redes &amp; Segurança | VMware · Veeam · Fortinet NSE2 · LGPD</div>
+          <div class="chips">
+            <span class="chip">Windows &amp; Linux</span>
+            <span class="chip">NOC &amp; Monitoramento</span>
+            <span class="chip">Redes (Cisco/HP)</span>
+            <span class="chip">FortiGate/WAF</span>
+            <span class="chip">VMware</span>
+            <span class="chip">Veeam</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="cv_luis_fernando.pdf" download>⬇ Baixar CV (PDF)</a>
+            <a class="btn secondary" href="#contato">Contato</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="panel">
+        <h2>Sobre</h2>
+        <p>
+          Profissional com experiência em Tecnologia da Informação, atuando em ambientes de missão crítica.
+          Experiência em infraestrutura de redes, servidores Windows e Linux, backup (Veeam) e segurança da informação (Fortinet).
+          Vivência com monitoramento (Zabbix, Grafana, Prometheus) e operação em NOC.
+          Perfil colaborativo, resiliente e orientado à continuidade operacional e governança.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia">
+      <div class="panel">
+        <h2>Analista de Infraestrutura - ITFácil</h2>
+        <p><strong>Set/2023 — atual · São Paulo/SP · Híbrido</strong></p>
+        <p><strong>Clientes atendidos:</strong> Banco Caixa Geral (BCG), Ecom Energia, Banco Mercedes‑Benz.</p>
+        <div class="chips">
+          <a class="chip" href="https://www.bcgbrasil.com.br/Paginas/Homepage.aspx" target="_blank" rel="noopener">Site do BCG</a>
+          <a class="chip" href="http://parceiroecom.ecomenergia.com.br/" target="_blank" rel="noopener">Ecom — Parceiro</a>
+        </div>
+        <ul>
+          <li><strong>BCG:</strong> Virtualização com VMware; Zabbix/Grafana/Prometheus; Docker; AD, DNS, DHCP, WDS; Veeam; Kaspersky; firewalls e switches (Cisco, HP); NOC (monitoramento proativo, incidentes em tempo real); CRK + integradas (EasyWay, Change, CRK, SISBACEN, Função, Zap, JD); ferramentas de controladoria (TED_TEF, RMA SWIFT, certificados).</li>
+          <li><strong>Ecom Energia:</strong> FortiGate/WAF; Windows Server + GPO; Linux (Web, NFS, DNS, Samba, iptables); Git/GitHub; Docker Registry/Compose; Shell Script; Jira (Kanban).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos">
+      <div class="panel">
+        <h2>Projetos</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>NOC — BCG (Zabbix/Grafana)</h3>
+            <p class="small">Implantação de monitores e dashboards para disponibilidade, latência e capacidade. Abertura automática de incidentes e playbooks de resposta.</p>
+          </div>
+          <div class="card">
+            <h3>Segurança — Ecom (FortiGate/WAF)</h3>
+            <p class="small">Políticas de firewall e WAF, VPN site-to-site e SSL, revisão de regras e hardening de serviços expostos.</p>
+          </div>
+          <div class="card">
+            <h3>Backup — Veeam</h3>
+            <p class="small">Configuração de jobs, rotinas de restore e testes de recuperação para ambientes Windows e Linux críticos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICAÇÕES -->
+    <section id="certificacoes">
+      <div class="panel">
+        <h2>Certificações &amp; Cursos</h2>
+        <ul>
+          <li>Fortinet — Network Security Associate NSE 1</li>
+          <li>Fortinet — Network Security Associate NSE 2</li>
+          <li>Kaseya Certified Technician — Kaseya 365</li>
+          <li>LGPD — Lei Geral de Proteção de Dados</li>
+          <li>Arquitetura de Redes</li>
+          <li>Mikrotik</li>
+          <li>Cobit 2019</li>
+          <li>Windows 10</li>
+          <li>Windows 11</li>
+          <li>Linux</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="panel">
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:sfernandoluis23@gmail.com">sfernandoluis23@gmail.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/luis-fernando-da-silva-442549b9" target="_blank" rel="noopener">/luis-fernando-da-silva-442549b9</a></p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Luis Fernando da Silva — Portfólio profissional.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
